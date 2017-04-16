@@ -1,4 +1,28 @@
-body{background: skyblue}
-h1,h2,h3,p{color:white;}
-div{background: darkblue}
-footer{background: black}
+header {
+  background: red;
+}
+
+header h1 {
+  color: green;
+}
+
+header h2 {
+  color: blue;
+  margin: 0;
+  font-family: fantasy;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+header h3 {
+  color: #fff;
+}
+
+button {
+  background: pink;
+}
+
+button:hover {
+  background: purple;
+}

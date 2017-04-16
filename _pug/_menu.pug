@@ -1,0 +1,9 @@
+nav
+	ul
+		//- li: a(href="index.html") Inicio
+		//- li: a(href="blog.html") Blog
+		//- li: a(href="contacto.html") Contacto
+		- var menus = ["Inicio", "Blog", "Contacto"]
+		- var menuref = ["index", "blog", "contacto"]; 
+		each item, numref in menus
+			li!= "<a href='"+ menuref[numref] + ".html'>" + item  + "</a>"

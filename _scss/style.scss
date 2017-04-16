@@ -1,0 +1,32 @@
+//Variables
+$color: #fff;
+
+//mixed
+
+@mixin titulos($fsize, $fw, $color: #000){
+	margin: 0;
+	font:{
+		family: fantasy;
+		size: $fsize;
+		weight: $fw
+	}
+	color: $color;
+}
+
+//css
+body{}
+
+header{
+	background: red;
+	h1{color: green}
+	h2{
+		color: blue;
+		@include titulos(20px, bold, #fff )
+	}
+	h3{color: $color }
+}
+
+button{
+	background: pink;
+	&:hover{ background: purple}
+}

@@ -1,0 +1,50 @@
+doctype html
+html
+	head
+		title Blog de Contacto
+		meta(charset="utf-8")
+		script.
+			if (usingPug)
+				console.log('you are awesome')
+			else
+				console.log('use pug')
+		link(rel="stylesheet" type="text/css" href="_css/style.css")
+	body
+		div.wrapper
+			include _menu
+			h2 By #{author}
+			div.article
+				span hola
+				span.bang que onda
+
+			div.article
+				- var list = ["Uno", "Dos", "TreS","Cuatro", "Cinco", "Seis"]
+				each item in list
+					li= item
+			div.article
+				- var friends
+				case friends = 10
+					when 0: p cero
+					when 1: p cero
+					when 2 
+					when 3: p tienes #{friends} amigos
+					default
+						p hola
+			div.article
+				p This text belongs to the paragraph tag.
+				.
+					br
+				.
+					This text belongs to the div tag.
+				div#foo(data-bar="foo")&attributes({'data-foo': 'bar'})
+				div#foo(data-bar="foo", 'data-foo'= 'bar')
+		div.footer
+			p soy el footer 
+				|
+				|
+				a tyarararartara
+				|
+				|
+				a 
+					- var authenticated = false
+					div(class=authenticated ? 'authed' : 'anon')
